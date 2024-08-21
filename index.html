@@ -1,0 +1,188 @@
+<!-- website by -->
+<!-- E-mail: caio.nogueira@fiap.com.br -->
+<!-- github: caio-thom -->
+<!-- E-mail: gustavo.silveira@fiap.com.br -->
+<!-- github: gusta-silveira -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <title>Ajuda - FIAP Paulista</title>
+    <link rel="stylesheet" href="Css/style.css">
+    
+</head>
+
+<body>
+  
+<div class="login-box">
+  <img src="img/fiap.png" alt="Descrição da imagem">
+  <form class="form" id="form">
+    <div class="user-box">
+      <input type="text" name="" required="" id="nome">
+      <label>Nome</label>
+    </div>
+
+    <div class="custom-selector">
+      <select name="cars" id="andar" onchange="atualizarSegundaDropdown()">
+        <option value="">Selecione um andar</option>
+        <option value="2º Andar">2º Andar</option>
+        <option value="3º Andar">3º Andar</option>
+        <option value="4º Andar">4º Andar</option>
+        <option value="5º Andar">5º Andar</option>
+        <option value="6º Andar">6º Andar</option>
+        <option value="7º Andar">7º Andar</option>
+      </select>
+    </div>
+
+    <div class="custom-selector">
+      <select id="local" disabled onchange="atualizarTerceiraDropdown()"> 
+        <option value="">Selecione um local</option>
+      </select>
+    </div>
+
+    <div class="custom-selector">
+      <select name="cars" id="problema" disabled>
+        <option value="">Selecione o problema</option>
+        <option value="Ar Condicionado">Ar Condicionado</option>
+        <option value="Áudio">Áudio (saída de som / microfone)</option>
+        <option value="Computador">Computador com problema</option>
+        <option value="Checkpoint / Global Solution">Checkpoint / Global Solution</option>
+        <option value="Firewall">Liberação Firewall</option>
+        <option value="Impressora">Impressora</option>
+        <option value="Kit IoT">Kit IoT</option>
+        <option value="Login">Login (ajuda com usuário/senha)</option>
+        <option value="Projetor">Projetor</option>
+        <option value="Software">Software</option>
+        <option value="Periféricos">Periféricos (mouse/teclado/webcam)</option>
+        <option value="VM">VM - Máquina Virtual</option>
+        <option value="Outros">Outros (colocar observação)</option>
+      </select>
+    </div>
+
+    <div class="user-box">
+      <input type="text" name="" required="" id="obs">
+      <label>Obs.:</label>
+    </div>
+    
+    <a href="#" id="do" type="button">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Enviar
+      <script src="Js/js.js"></script>
+    </a>
+  </form>
+
+</div>
+
+<script>
+  function atualizarSegundaDropdown() {
+    var primeiraDropdown = document.getElementById("andar");
+    var segundaDropdown = document.getElementById("local");
+    
+    // Limpar opções existentes na segunda dropdown, mantendo a mensagem default
+    segundaDropdown.innerHTML = '<option value="">Selecione um local</option>';
+    
+    // Determinar as opções a serem adicionadas com base na seleção da primeira dropdown
+    if (primeiraDropdown.value === "2º Andar") {
+      segundaDropdown.innerHTML += '<option value=">Coworking - 2º Andar">Coworking - 2º Andar</option>';
+      segundaDropdown.innerHTML += '<option value="Recepção - 2º Andar">Recepção - 2º Andar</option>';
+      segundaDropdown.innerHTML += '<option value="Talent Lab">Talent Lab</option>';
+      segundaDropdown.innerHTML += '<option value="201">201</option>';
+      segundaDropdown.innerHTML += '<option value="202">202</option>';
+      segundaDropdown.innerHTML += '<option value="203">203</option>';
+      segundaDropdown.innerHTML += '<option value="204">204</option>';
+      segundaDropdown.innerHTML += '<option value="205">205</option>';
+      segundaDropdown.innerHTML += '<option value="206">206</option>';
+      segundaDropdown.innerHTML += '<option value="207">207</option>';
+      segundaDropdown.innerHTML += '<option value="208">208</option>';
+    } else if (primeiraDropdown.value === "3º Andar") {
+      segundaDropdown.innerHTML += '<option value="Coworking - 3º Andar">Coworking - 3º Andar</option>';
+      segundaDropdown.innerHTML += '<option value="Recepção - 3º Andar">Recepção - 3º Andar</option>';
+      segundaDropdown.innerHTML += '<option value="Admission">Admission</option>';
+      segundaDropdown.innerHTML += '<option value="Sala dos Professores">Sala dos Professores</option>';
+      segundaDropdown.innerHTML += '<option value="Copa">Copa</option>';
+      segundaDropdown.innerHTML += '<option value="301">301</option>';
+      segundaDropdown.innerHTML += '<option value="302">302</option>';
+      segundaDropdown.innerHTML += '<option value="303">303</option>';
+      segundaDropdown.innerHTML += '<option value="304">304</option>';
+      segundaDropdown.innerHTML += '<option value="305">305</option>';
+      segundaDropdown.innerHTML += '<option value="306">306</option>';
+      segundaDropdown.innerHTML += '<option value="307">307</option>';
+    } else if (primeiraDropdown.value === "4º Andar") {
+      segundaDropdown.innerHTML += '<option value="Coworking - 4º Andar">Coworking - 4º Andar</option>';
+      segundaDropdown.innerHTML += '<option value="Recepção - 4º Andar">Recepção - 4º Andar</option>';
+      segundaDropdown.innerHTML += '<option value="Salas de Reunião - 4º Andar">Salas de Reunião - 4º Andar</option>';
+      segundaDropdown.innerHTML += '<option value="Cabines">Cabines</option>';
+      segundaDropdown.innerHTML += '<option value="400">400</option>';
+      segundaDropdown.innerHTML += '<option value="401">401</option>';
+      segundaDropdown.innerHTML += '<option value="402">402</option>';
+      segundaDropdown.innerHTML += '<option value="403">403</option>';
+      segundaDropdown.innerHTML += '<option value="405">405</option>';
+      segundaDropdown.innerHTML += '<option value="406">406</option>';
+      segundaDropdown.innerHTML += '<option value="407">407</option>';
+      segundaDropdown.innerHTML += '<option value="408">408</option>';
+    } else if (primeiraDropdown.value === "5º Andar") {
+      segundaDropdown.innerHTML += '<option value="Coworking - 5º Andar">Coworking - 5º Andar</option>';
+      segundaDropdown.innerHTML += '<option value="Recepção - 5º Andar">Recepção - 5º Andar</option>';
+      segundaDropdown.innerHTML += '<option value="Kitchenet - 5º Andar">Kitchenet - 5º Andar</option>';
+      segundaDropdown.innerHTML += '<option value="Salas de Reunião - 5º Andar">Salas de Reunião - 5º Andar</option>';
+      segundaDropdown.innerHTML += '<option value="Biblioteca">Biblioteca</option>';
+      segundaDropdown.innerHTML += '<option value="501">501</option>';
+      segundaDropdown.innerHTML += '<option value="502">502</option>';
+      segundaDropdown.innerHTML += '<option value="503">503</option>';
+      segundaDropdown.innerHTML += '<option value="505">505</option>';
+      segundaDropdown.innerHTML += '<option value="506">506</option>';
+      segundaDropdown.innerHTML += '<option value="507">507</option>';
+      segundaDropdown.innerHTML += '<option value="508">508</option>';
+    } else if (primeiraDropdown.value === "6º Andar") {
+      segundaDropdown.innerHTML += '<option value="Coworking - 6º Andar">Coworking - 6º Andar</option>';
+      segundaDropdown.innerHTML += '<option value="Recepção - 6º Andar">Recepção - 6º Andar</option>';
+      segundaDropdown.innerHTML += '<option value="Helpcenter">Helpcenter</option>';
+      segundaDropdown.innerHTML += '<option value="600">600</option>';
+      segundaDropdown.innerHTML += '<option value="601">601</option>';
+      segundaDropdown.innerHTML += '<option value="602">602</option>';
+      segundaDropdown.innerHTML += '<option value="603">603</option>';
+      segundaDropdown.innerHTML += '<option value="604">604</option>';
+      segundaDropdown.innerHTML += '<option value="605">605</option>';
+      segundaDropdown.innerHTML += '<option value="606">606</option>';
+      segundaDropdown.innerHTML += '<option value="607">607</option>';
+      segundaDropdown.innerHTML += '<option value="608">608</option>';
+      segundaDropdown.innerHTML += '<option value="609 - Maker Lab">609 - Maker Lab</option>';
+    } else if (primeiraDropdown.value === "7º Andar") {
+      segundaDropdown.innerHTML += '<option value="Coworking - 7º Andar">Coworking - 7º Andar</option>';
+      segundaDropdown.innerHTML += '<option value="Kitchenet - 7º Andar">Kitchenet - 7º Andar</option>';
+      segundaDropdown.innerHTML += '<option value="Recepção - 7º Andar">Recepção - 7º Andar</option>';
+      segundaDropdown.innerHTML += '<option value="701">701</option>';
+      segundaDropdown.innerHTML += '<option value="702">702</option>';
+      segundaDropdown.innerHTML += '<option value="703">703</option>';
+      segundaDropdown.innerHTML += '<option value="704">704</option>';
+      segundaDropdown.innerHTML += '<option value="705">705</option>';
+      segundaDropdown.innerHTML += '<option value="706">706</option>';
+      segundaDropdown.innerHTML += '<option value="707">707</option>';
+      segundaDropdown.innerHTML += '<option value="708">708</option>';
+      segundaDropdown.innerHTML += '<option value="709">709</option>';
+      segundaDropdown.innerHTML += '<option value="710">710</option>';
+    }
+    
+    // Habilitar a segunda dropdown quando uma opção for selecionada na primeira dropdown
+    segundaDropdown.disabled = false;
+  }
+
+  function atualizarTerceiraDropdown() {
+    var segundaDropdown = document.getElementById("local");
+    var terceiraDropdown = document.getElementById("problema");
+    
+    // Habilitar a terceira dropdown quando uma opção for selecionada na primeira dropdown
+    terceiraDropdown.disabled = false;
+  }
+
+  </script>
+
+
+  </body>
+
+</html>
